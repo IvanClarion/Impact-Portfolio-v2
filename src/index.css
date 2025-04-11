@@ -1,0 +1,300 @@
+@import "tailwindcss";
+@theme{
+  --color-navyblue:#020617;
+  --color-light-nay:#0B217D;
+  --color-sky-blue:#008080;
+  --color-gray-v1:#C8C8C8;
+  --color-orange-v1:#FF6600;
+  --color-orange-v2:#FF66001A;
+  --color-pink-v1:#D1565E;
+  --font---default-font-family: "Nura";
+
+}
+body {
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: normal;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+@font-face {
+  font-family: "Nura";
+  src: url("assets/Font/Nura-Normal.ttf")
+}
+
+@layer components{
+  .main-login{
+    @apply
+    h-screen
+    w-screen
+    justify-center
+    items-center
+    flex
+    flex-col
+    bg-gradient-to-t from-navyblue to-light-nay
+    overflow-hidden
+    ;
+  }
+}
+@layer components{
+  .login-container{
+    @apply
+    flex
+    flex-col
+    items-center
+    bg-white
+    lg:w-md
+    
+    w-xs
+    h-96
+    rounded-2xl
+    overflow-hidden
+    ;
+  }
+}
+@layer components{
+  .shape{
+    font-family: "Nura";
+    @apply
+    w-full
+    h-1/2
+    flex
+    flex-col
+    text-center
+    text-xl
+    justify-center
+    items-center
+    overflow-hidden
+    bg-sky-blue
+    rounded-b-full
+    text-white
+  }
+}
+@layer components{
+  .logo-bg{
+    @apply
+    bg-gray-v1
+    
+    rounded-full
+    ;
+  }
+}
+@layer components{
+  .login-form{
+    @apply
+    w-full
+    flex
+    flex-col
+    p-3
+    gap-3
+    ;
+  }
+}
+@layer components{
+  .login-form input{
+    @apply
+    w-full
+    outline-none
+    px-2
+    py-1
+    text-black
+    
+    ;
+  }
+}
+@layer components{
+  .login-form fieldset{
+    @apply
+    border
+    p-0
+    rounded-lg
+    focus-within:border-sky-blue
+    focus-within:text-sky-blue
+    duration-300
+    ;
+  }
+  
+}
+@layer components{
+  button{
+    @apply
+    
+    bg-orange-v2
+    
+    text-pink-v1
+    p-2
+    rounded-lg
+    font-semibold
+    border
+    border-orange-v1
+    cursor-pointer
+    hover:bg-transparent
+    hover:border
+    hover:text-orange-v1
+    duration-300
+    ;
+  }
+}
+@layer components{
+  .aside-navbar{
+    @apply
+    lg:sticky
+    lg:top-0
+    bottom-0
+    sticky
+    flex
+    flex-col
+    lg:h-screen
+    ;
+  }
+}
+@layer components{
+  .aside-navbar nav{
+    @apply
+    bg-navyblue
+    lg:h-full
+    lg:w-fit
+    w-svw
+    flex
+    lg:flex-col
+    lg:justify-between
+    justify-center
+    items-center
+    text-white
+    lg:rounded-xl
+    rounded-t-full
+    gap-5
+    p-2
+    lg:m-5
+    ;
+  }
+}
+@layer components{
+  .aside-navbar nav ul{
+    @apply
+    flex
+    lg:flex-col
+    justify-center
+    items-center
+    p-2
+    gap-5
+    ;
+  }
+}
+@layer components{
+  .aside-navbar nav ul li img{
+    @apply
+    lg:size-8
+    size-6
+    ;
+  }
+}
+@layer components{
+  .aside-navbar nav ul li {
+    @apply
+    hover:bg-sky-blue
+    hover:rounded-full
+    p-3
+    duration-300
+    ;
+  }
+}
+@layer components{
+  .active-hover{
+    @apply
+    bg-sky-blue
+    rounded-full
+    duration-300
+    ;
+  }
+}
+@layer components{
+  .admin-section{
+    @apply
+    lg:h-svh
+    lg:w-full
+    bg-gray-v1
+    m-1
+    overflow-hidden
+    lg:mx-5
+    lg:my-5
+    rounded-xl
+    ;
+  }
+}
+@layer components{
+  .admin-header{
+    @apply
+    bg-sky-blue
+    text-white
+    uppercase
+    text-xl
+    rounded-t-md
+    p-2
+    font-semibold
+    ;
+  }
+}
+@layer components{
+  .dashboard-content{
+    @apply
+    p-2
+    grid
+    grid-cols-2
+    lg:grid-cols-3
+    grid-rows-1
+    gap-2
+  }
+}
+@layer components{
+  .summary-container{
+    @apply
+    bg-white
+    p-2
+    rounded-r-md
+    break-words
+    justify-center
+    flex
+    flex-col
+    border-l-5
+    border-sky-blue
+    uppercase
+    lg:h-36
+    lg:gap-y-3
+    ;
+  }
+}
+@layer components{
+  .summary-article{
+    @apply
+    text-center
+    font-bold
+    lg:text-xl
+    
+    ;
+  }
+}
+@layer components {
+  .summary-container img{
+    @apply
+    lg:size-8
+    size-5
+    ;
+  }
+}
+@layer components{
+  .chart-container{
+    @apply
+    bg-white
+    p-2
+    flex
+    flex-col
+    justify-center
+    items-center
+    lg:h-80
+    rounded-md
+    shadow-2xl
+    ;
+  }
+}
