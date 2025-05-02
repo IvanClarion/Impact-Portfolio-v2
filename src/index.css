@@ -7,6 +7,7 @@
   --color-orange-v1:#FF6600;
   --color-orange-v2:#FF66001A;
   --color-pink-v1:#D1565E;
+  --color-modal:#000000CC;
   --font---default-font-family: "Nura";
 
 }
@@ -23,6 +24,19 @@ body {
   src: url("assets/Font/Nura-Normal.ttf")
 }
 
+.loader {
+  width: 50px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: 
+    radial-gradient(farthest-side,#008080 94%,#0000) top/8px 8px no-repeat,
+    conic-gradient(#0000 30%,#008080);
+  -webkit-mask: radial-gradient(farthest-side,#0000 calc(100% - 8px),#000 0);
+  animation: l13 1s infinite linear;
+}
+@keyframes l13{ 
+  100%{transform: rotate(1turn)}
+}
 @layer components{
   .main-login{
     @apply
@@ -137,6 +151,26 @@ body {
   }
 }
 @layer components{
+  .button-save{
+    @apply
+    
+    bg-orange-v1
+    
+    text-white
+    p-2
+    rounded-lg
+    font-semibold
+    border
+    border-orange-v1
+    cursor-pointer
+    hover:bg-transparent
+    hover:border
+    hover:text-orange-v1
+    duration-300
+    ;
+  }
+}
+@layer components{
   .aside-navbar{
     @apply
     lg:sticky
@@ -185,8 +219,7 @@ body {
 @layer components{
   .aside-navbar nav ul li img{
     @apply
-    lg:size-8
-    size-6
+    size-5
     ;
   }
 }
@@ -216,6 +249,7 @@ body {
     lg:w-full
     bg-gray-v1
     m-1
+    h-screen
     overflow-hidden
     lg:mx-5
     lg:my-5
@@ -232,6 +266,8 @@ body {
     text-xl
     rounded-t-md
     p-2
+    flex
+    w-full
     font-semibold
     ;
   }
@@ -276,7 +312,7 @@ body {
   }
 }
 @layer components {
-  .summary-container img{
+  .summary-container img, .summary-container-btn img{
     @apply
     lg:size-8
     size-5
@@ -295,6 +331,214 @@ body {
     lg:h-80
     rounded-md
     shadow-2xl
+    ;
+  }
+}
+@layer components{
+  .summary-container-btn{
+    @apply
+    bg-navyblue
+    text-white
+    p-2
+    rounded-r-md
+    break-words
+    justify-center
+    flex
+    flex-col
+    border-l-5
+    border-sky-blue
+    uppercase
+    lg:h-36
+    lg:gap-y-3
+    cursor-pointer
+    ;
+  }
+}
+@layer components{
+  .button-w-bg{
+    @apply
+    bg-orange-v1
+    lg:p-2
+    p-1
+    rounded-full
+    ;
+  }
+}
+@layer components{
+  .modal{
+    @apply
+    bg-modal
+    h-screen
+    w-full
+    flex
+    justify-center
+    fixed
+    overflow-hidden
+    m-0
+    ;
+  }
+}
+@layer components{
+  .modal-container{
+    @apply
+    bg-white
+    lg:w-1/2
+    w-full
+    m-5
+    rounded-xl
+    overflow-auto
+
+    ;
+  }
+}
+@layer components{
+  .modal-layout span{
+    @apply
+    text-xs
+    border
+    border-dashed
+    p-5
+    overflow-hidden
+    flex-col
+    items-center
+    flex
+    justify-center
+    rounded-md
+    ;
+  }
+}
+@layer components{
+  .modal-layout{
+    @apply
+    grid-cols-2
+    grid
+    items-end
+    m-5
+    gap-5
+    ;
+  }
+}
+@layer components{
+  .file-ui{
+    @apply
+    file:bg-orange-v1
+    file:text-white
+    file:rounded-full
+    file:text-sm
+    file:p-2
+    text-sm
+    file:cursor-pointer
+    file:font-semibold
+    ;
+  }
+}
+@layer components{
+  .modal-button-layout{
+    @apply
+    grid
+    grid-cols-2
+    gap-3
+    mx-0
+    bg-white
+    p-2
+    bottom-0
+    sticky
+    ;
+  }
+}
+@layer components{
+  .modal-container form{
+    @apply
+    m-5
+    flex
+    flex-col
+    gap-2
+    ;
+  }
+}
+@layer components{
+  .modal-container form input{
+    @apply
+    border
+    rounded-md
+    p-2
+    focus:border-sky-blue
+    outline-0
+    duration-300
+    placeholder:text-xs
+    ;
+  }
+}
+@layer components{
+  .modal-container form label{
+    @apply
+    font-semibold
+    text-sm
+    ;
+  }
+}
+@layer components{
+  .textarea{
+    @apply
+    outline-0
+    border
+    rounded-md
+    h-72
+    resize-none
+    p-2
+    ;
+  }
+}
+@layer components{
+  .searchbar{
+    @apply
+    size-full
+    p-2
+    outline-0
+    border
+    rounded-xl
+    flex
+    gap-2
+    ;
+  }
+}
+@layer components{
+  .project-contents{
+    @apply
+    grid
+    lg:grid-cols-4
+    grid-cols-2
+    gap-3
+    mx-2
+    my-4
+    ;
+  }
+}
+@layer components{
+  .project-contents-container{
+    @apply
+    bg-white
+    p-2
+    rounded-lg
+    flex
+    flex-col
+    gap-5
+    break-words
+    ;
+  }
+}
+@layer components {
+  .project-image{
+    @apply
+    aspect-video
+    rounded-md
+    ;
+  }
+}
+@layer components {
+  .project-image img{
+    @apply
+    rounded-md
     ;
   }
 }

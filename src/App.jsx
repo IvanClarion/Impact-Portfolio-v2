@@ -9,6 +9,7 @@ import AdminProject from './Admin/AdminProject'
 import AdminStatistics from './Admin/AdminStatistics'
 import AdminChart from './Admin/AdminFeedbackChart'
 import AdminTestimonialsChart from './Admin/AdminTestimonialsChart'
+import AdminAddmModal from './Admin/AdminAddmModal'
 function App() {
   const location = useLocation()
   const isAdminPage = location.pathname.startsWith('/admin')
@@ -27,6 +28,7 @@ function App() {
         <Route path = "/adminAccount" element = {<AdminAccount/>}/>
         <Route path = "/adminChart" element={<AdminChart/>}/>
         <Route path = "/adminTestimonialChart" element={<AdminTestimonialsChart/>}/>
+        <Route path = "/adminAddModal" element={<AdminAddmModal/>}/>
         </Route>
       </Routes>
     </section>
